@@ -6,7 +6,9 @@
 
 body {
   background:url(../6.jpg);
-  font-family: 'Titillium Web', sans-serif;
+
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: 'IBM Plex Mono', monospace;
   background-size:cover;
 }
 
@@ -22,17 +24,26 @@ a {
   transition: .5s ease;
 }
 a:hover {
-  color: #ffffff;
+  color: #ab82d2;
 }
 
-.form {
-  background:rgba(153,153,153,0.6);
+.form  {
   padding: 40px;
-  max-width: 800px;
   margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   transition: .5s ease;
+}
+.form1 {
+  background:rgba(153,153,153,0.6);
+    max-width: 800px;
+}
+
+.form2 {
+background:rgba(150,150,150,0.6);
+margin-top: 100px;
+margin-bottom: 100px;
+  max-width: 1000px;
 }
 
 .form:hover {
@@ -40,9 +51,12 @@ a:hover {
 	}
 
 .tab-group {
+  /* font-family: 'Satisfy', cursive; */
+  font-size: 40px;``
   list-style: none;
   padding: 0;
   margin: 0 0 40px 0;
+  align-items: center;
 }
 .tab-group:after {
   content: "";
@@ -67,7 +81,7 @@ a:hover {
   color: #6B95EF;
 }
 .tab-group .active a {
-  background: #6B95EF;
+  background: #ae8ece;
   color: #ffffff;
 }
 
@@ -81,6 +95,7 @@ h1 {
   font-weight: 300;
   margin: 0 0 40px;
 }
+
 
 label {
   position: absolute;
@@ -111,21 +126,23 @@ label.highlight {
 }
 
 input {
-  font-size: 22px;
+  font-size: 20px;
   display: block;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  font-family: 'IBM Plex Mono', monospace;
   padding: 5px 10px;
   background: none;
   background-image: none;
   border: 1px solid #fff;
-  color: #fff;
+  color:rgba(120,120,120,1);
   border-radius: 0;
   transition: border-color .25s ease, box-shadow .25s ease;
 }
 input:focus{
   outline: 0;
   border-color: #000;
+
 }
 
 .field-wrap {
@@ -156,12 +173,12 @@ input:focus{
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #110C03;
+  background: #000;
   color: #ffffff;
   transition: all 0.5s ease;
 }
 .button:hover, .button:focus {
-  background: #6B95EF;
+  background: #6a359f;
 }
 
 .button-block {
@@ -176,4 +193,390 @@ input:focus{
 }
 #reminderPage {
   display: none;
+}
+
+
+table, th, td {
+    /* border: 1px solid grey;*/
+    text-align: center;
+}
+
+tr:nth-child(even) {background-color: #d6d1d1;}
+tr:nth-child(odd) {background-color: #f1f1f1;}
+
+table {
+  width: 100%;
+}
+
+th, td {
+    padding: 55px;
+    text-align: left;
+}
+
+/* ...... */
+
+.header {
+  background-color: #f1f1f1;
+  margin-top: 0px;
+  /* height: 700px; */
+  text-align: center;
+  /* height: 1000px; */
+
+}
+
+#top,#bottom{
+    /* height: 1000px; */
+    /* width: 300px;
+    background: green; */
+}
+
+#middle{
+
+    width: 300px;
+    /* background: pink; */
+
+}
+
+#nav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#nav a {
+  float: right;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  height: 60px;
+}
+
+#nav a:hover {
+  background-color: #ddd !important;
+  color: black !important;
+}
+
+#nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+/* ....... */
+
+#th-img {
+   /* margin-left: 30px; */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    width: 30px; /* Set a small width */
+    background: none;
+    align-self: center;
+}
+
+
+
+
+li a:hover {
+  color: #855dab;
+  text-decoration: none;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    height: 60px;
+    /* display: inline; */
+
+    /* border: 1px solid white; */
+}
+
+
+
+pull-left {
+  text-align: left;
+  margin-left: 40px;
+}
+
+pull-right{
+text-align: right;
+  margin-right: 40px;
+  margin-left: 40px;
+  align-items: right;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.divider ~ li{
+  display: inline;
+  color: #000;
+  float: left;
+  height: 80px;
+  align-items: center;
+}
+
+
+
+.divider ~ li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 25px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-family: 'Satisfy', cursive; */
+    /* text-transform: uppercase; */
+    font-weight: 200;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #ffffff;
+    color: #ab82d2;
+}
+
+.tabBarButtonItems {
+  height: 70px;
+}
+
+
+
+#sm{
+  z-index: 3;
+  /* display: in */
+}
+
+#logoutButtonMainPage{
+  color: #000;
+  background-color:#3A195B;
+  font-weight: 600;
+}
+
+/*#descriptionHeader {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+}*/
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(226,217,217); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+}
+
+.mod {
+  /* width: 70%; */
+  /* height: 70%; */
+
+}
+
+/* Modal Content */
+.modal-content {
+  width: 70%;
+  max-height: 95%;
+    background-color: #f1f1f1;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    border-radius: 12px;
+    box-shadow: 0px 0px 40px 16px rgba(18,18,18,1.00);
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+    -webkit-animation-name: animatetop;
+ -webkit-animation-duration: 0.4s;
+ animation-name: animatetop;
+ animation-duration: 0.4s
+
+
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+     color: #aaaaaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+
+    font-family: 'Titillium Web', sans-serif;
+
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+    /* box-shadow:grey; */
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+ #tableTaskDiv {
+  /* text-align: left;
+  margin-left: 60px; */
+  margin-top: 10px;
+    text-align: center
+  text-transform: capitalize;
+  font-weight:bold;
+  font-size: 30px;
+  width: 35%;
+}
+
+#rowElementDiv {
+  background-color: rgb(0, 0, 102, 0.6);
+
+
+}
+
+.timerDivClass {
+  margin-top: 10px;
+ /* text-align: left;
+ margin-left: 60px; */
+
+ text-transform: capitalize;
+ font-weight:bold;
+ font-size: 20px;
+}
+
+
+#tableDateDiv {
+  /* text-align: right;
+  margin-right: 60px; */
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#taskMessageDiv {
+  margin-top: 20px;
+ /* text-align: left;
+ margin-left: 60px; */
+ text-transform: capitalize;
+ font-weight:bold;
+ font-size: 30px;
+}
+
+#tableTimeDiv {
+/* text-align: right;
+margin-right: 60px; */
+text-align: center;
+/* margin-left: 180px; */
+font-size: 70px;
+}
+
+#tableCallDiv {
+  /* text-align: left;
+  margin-left: 60px; */
+  text-align: center;
+}
+
+#tableMessageDiv {
+  /* text-align: right;
+  margin-right: 60px;*/
+  margin-bottom: 20px;
+  text-align: center;
 }

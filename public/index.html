@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>r3mind.me</title>
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/lab6.css">
 
@@ -10,18 +12,18 @@
 
 <body onload="body_on_load()">
 
-  <div id="loginForm" class="form">
+  <div id="loginForm" class="form form1">
 
       <img src = "remindmeee.png" alt = "LOGO" align="middle">
       <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
+        <li class="tab active"><a  class ="tabBarButtonItems" href="#signup">Sign Up</a></li>
+        <li class="tab"><a class ="tabBarButtonItems" href="#login">Log In</a></li>
       </ul>
 
       <div class="tab-content">
         <div id="signup">
 
-   <h1>Sign Up for Free</h1>
+   <h1 style="font-family: 'Satisfy', cursive">Sign Up for Free</h1>
           <div >
 
           <div class="top-row">
@@ -29,14 +31,14 @@
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" id="firstNameInputField"/>
+              <input type="text" required autocomplete="off" id="firstNameInputField" style="color: white"/>
             </div>
 
             <div class="field-wrap">
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off" id="lastNameInputField"/>
+              <input type="text"required autocomplete="off" id="lastNameInputField" style="color: white"/>
             </div>
           </div>
 
@@ -44,21 +46,21 @@
             <label>
               Phone Number<span class="req">*</span>
             </label>
-            <input type="text" required autocomplete="off" id="phoneNumberInputField"/>
+            <input type="text" required autocomplete="off" id="phoneNumberInputField" style="color: white"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off" id="emailInputField"/>
+            <input type="email"required autocomplete="off" id="emailInputField" style="color: white"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Set A Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off" id="passwordInputField"/>
+            <input type="password"required autocomplete="off" id="passwordInputField" style="color: white"/>
           </div>
 
           <button class="button button-block" id="signupButtonInput"/>Get Started</button>
@@ -69,7 +71,7 @@
 
         <div id="login">
 
-	<h1>Welcome Back!</h1>
+	<h1 style="font-family: 'Satisfy', cursive">Welcome Back!</h1>
 
           <div>
 
@@ -77,14 +79,14 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off" id="emailSignInInputField"/>
+            <input type="email"required autocomplete="off" id="emailSignInInputField" style="color: white"/>
            </div>
 
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off" id="passwordSignInInputField"/>
+            <input type="password"required autocomplete="off" id="passwordSignInInputField" style="color: white"/>
           </div>
 
           <p class="forgot"><a href="#">Forgot Password?</a></p>
@@ -103,18 +105,200 @@
 <!-- reminder page -->
 
 <div id = "reminderPage">
-      <h1> home page </h1>
-      <div>
-      <input type="text" placeholder="message" id="messageInput"><br>
-      <input type="date" placeholder="date" id="dateInput"><br>
-      <input type="time" placeholder="time" id="timeInput"><br>
-      <input type="number" id="callCheckboxInput"><br>Call<br>
-      <input type="number" id="messageCheckboxInput"><br>Message<br>
 
-      <button class="button button-block" id="submitNewEventButtonInput"/>make event</button>
-      </div>
-      <button class="button button-block" id="logoutButtonInput"/>Log Out</button>
+  <!-- <div class="header"> -->
+    <!-- <h2>Welcome :)</h2> -->
+    <!-- <p>Scroll down to see the sticky effect.</p> -->
+    <!-- <h1> Welcome to</h1> -->
+    <!-- <img src= "remindmeee.png"> -->
+    <!-- <h1>You have enough to remember, we got this one. </h1> -->
+    <!-- <p style="font-family: 'Satisfy', cursive; font-size:20px; text-align: center"> Add Tasks |   Set Reminders   |   Get Notified | Check Progess</p> -->
+  <!-- </div> -->
+
+
+  <div id="nav">
+
+    <!-- <ul id= ""class="pull-left">
+    <li ><img id = "th-img" src= "remindmeee.png"></li>
+    </ul> -->
+
+
+        <ul class="pull-right">
+          <li class = "divider"></li>
+          <li style="float:right"><a id="logoutButtonInput" >LogOut</a></li>
+          <li style="float:right"><a  style="color: rgba(130,41,219,0.9)" id= "incompleteTaskButtonClicked">Incomplete Tasks</a></li>
+          <li style="float:right"><a  id= "completeTaskButtonClicked">Completed Tasks</a></li>
+          <li style="float:right" id="myBtn"><a>[ + ]</a></li>
+          <ul class="pull-left" >
+
+            <li class = "divider"></li>
+          <li>  <img style="width: 160px;" src = "remindmeee.png"></li>
+
+          </ul>
+
+        </ul>
+
+    </div>
+
+
+    <div class="header" id="descriptionHeader">
+      <!-- <h2>Welcome :)</h2> -->
+      <!-- <p>Scroll down to see the sticky effect.</p> -->
+      <!-- <h1> Welcome to</h1> -->
+      <br><br><br><br><br><br><br><br>
+      <img src= "remindmeee.png">
+      <h1 style="font-family: 'Satisfy', cursive; text-align: center; font-size:40px">You have enough to remember, we got this one. </h1>
+      <p style: "font-size:20px; text-align: center"> Add Tasks |   Set Reminders   |   Get Notified | Check Progess</p>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <!-- <a href="#top">Top</a> -->
+      <!-- <a href="#middle"><img id= "th-img" src= "btn.png"></a>
+
+      <div id="top"><a href="top"></a></div>
+      <div id="middle"><a href="middle"></a> </div> -->
+
+      <div class="top"><button type="button" onclick="smoothScroll(document.getElementById('second'))"><img id= "th-img"  src= "btn.png"></button></div>
+
+      <div class="middle" id="second"></div>
+
+
+
+    </div>
+
+
+  <div class="form form2">
+
+
+    <!-- <div id="top"><a href="top">Top</a></div> -->
+
+  <!--MOOOOOODAL -->
+    <!-- Trigger/Open The Modal -->
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class = "mod">
+    <span class="close">&times;</span>
+
+    <p>Enter your task</p>
+    <input type="text" name="task" id="messageInput"><br>
+
+    <p>Due date</p>
+    <input type="date" name = "due" id="dateInput"><br>
+
+    <p>Time it's due</p>
+    <input type="time" name = "due" id="timeInput"><br>
+
+    <p>Do you want a call as a reminder?</p>
+    <label class="container" style="color: rgba(90,70,182,1)">Yes
+      <input type="radio" checked="checked" name="call" value="Yes" id="callCheckboxInput1">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container" style="color: rgba(90,70,182,1)">No
+      <input type="radio" name="call" value="No" id="callCheckboxInput2">
+      <span class="checkmark"></span>
+    </label>
+
+    <p>Do you want a message as a reminder?</p>
+
+    <label class="container" style="color: rgba(90,70,182,1)">Yes
+      <input type="radio" checked="checked" name="message" value="Yes" id="messageCheckboxInput1" style="color: rgba(90,70,182,1)">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container" style="color: rgba(90,70,182,1)">No
+      <input type="radio" name="message" value="No" id="messageCheckboxInput2">
+      <span class="checkmark"></span>
+    </label>
+    <br>
+    <br>
+
+    <button class="button button-block" id="submitNewEventButtonInput">Done</button>
+  </div>
+  </div>
+
+  </div>
+
+  <script>
+
+  //
+
+  window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+  //
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+  </script>
+  <!--MOOOOOODAL -->
+
+  <table id = "eventsTable">
+  <!-- <tr>
+    <td>something here?</td>
+  </tr> -->
+  </table>
+
+
+  </div> <!-- /form -->
 </div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("nav");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 
 <!-- reminder page -->
 
